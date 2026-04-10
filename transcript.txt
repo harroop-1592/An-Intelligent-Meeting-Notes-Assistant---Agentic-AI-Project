@@ -1,0 +1,95 @@
+[00:00:01] Alex (Product Manager): Hey everyone, thanks for joining. Today we’ll focus on the Intelligent Meeting Notes Assistant—progress, blockers, and next steps.
+
+[00:00:08] Harroop (AI Engineer): Hi all.
+
+[00:00:10] Priya (Backend Engineer): Hey everyone.
+
+[00:00:12] David (Frontend Engineer): Hi team.
+
+[00:00:15] Alex: Quick recap—our goal is to automatically generate summaries, extract decisions, and assign action items from transcripts.
+
+[00:00:22] Harroop: From an AI perspective, we should ensure the model can reliably distinguish between decisions and general discussion. Prompt design will be critical here.
+
+[00:00:32] Priya: On the backend side, we’ve successfully integrated LangChain with the LLM. We can now process transcripts and generate basic summaries.
+
+[00:00:42] David: From the frontend side, I’ve created a simple UI where users can upload transcript files and view summarized outputs.
+
+[00:00:50] Alex: That’s great progress. What challenges are we facing?
+
+[00:00:54] Priya: One issue is handling very large transcripts. The token limit becomes a problem, so we are experimenting with chunking and map-reduce strategies.
+
+[00:01:04] David: Also, the UI currently doesn’t clearly separate decisions from action items—it’s all in one block.
+
+[00:01:10] Harroop: We can solve that by enforcing a structured schema in the LLM output, maybe using JSON with clearly defined fields.
+
+[00:01:18] Alex: Got it. We definitely need structured output—like sections for summary, decisions, and action items.
+
+[00:01:24] Priya: Yes, we can modify the prompt to enforce a structured JSON output.
+
+[00:01:30] Alex: Perfect. Let’s finalize that approach.
+
+[00:01:34] Alex: Decision: We will standardize the output format into three sections—Summary, Decisions, and Action Items.
+
+[00:01:42] David: That will also make it easier for the frontend to render.
+
+[00:01:46] Alex: Another topic—do we want to support real-time meeting transcription in this version?
+
+[00:01:52] Harroop: Real-time transcription would require streaming pipelines and might introduce latency challenges.
+
+[00:01:58] Priya: That might be complex for now. It would require integrating streaming APIs.
+
+[00:02:04] David: Agreed, maybe we should focus on uploaded transcripts first.
+
+[00:02:08] Alex: Makes sense.
+
+[00:02:10] Alex: Decision: Real-time transcription will be deferred to Phase 2. For now, we will support only uploaded transcript files.
+
+[00:02:20] Harroop: That’s a good phased approach and reduces initial complexity.
+
+[00:02:24] Alex: Let’s talk about integrations—Slack or email notifications?
+
+[00:02:28] David: Slack integration would be more impactful initially.
+
+[00:02:32] Priya: Email is easier to implement though.
+
+[00:02:36] Harroop: I’d recommend starting with email notifications first and then expanding to Slack once the system is stable.
+
+[00:02:42] Alex: Good point.
+
+[00:02:44] Alex: Decision: We will implement email notifications in Phase 1 and consider Slack integration later.
+
+[00:02:52] David: Works for me.
+
+[00:02:54] Alex: Alright, let’s assign some action items.
+
+[00:02:58] Alex: Action Item: Priya to implement structured JSON output using prompt engineering by Friday.
+
+[00:03:06] Priya: Got it.
+
+[00:03:08] Alex: Action Item: David to update the UI to display Summary, Decisions, and Action Items separately.
+
+[00:03:16] David: Sure, I’ll handle that.
+
+[00:03:18] Alex: Action Item: Harroop to design and test prompt templates for accurate extraction of decisions and action items.
+
+[00:03:26] Harroop: Sounds good, I’ll work on improving prompt reliability.
+
+[00:03:28] Alex: Action Item: Alex to define API contract for frontend-backend integration.
+
+[00:03:34] Alex: I’ll take that.
+
+[00:03:36] Priya: Do we have a timeline for demo?
+
+[00:03:40] Alex: Yes.
+
+[00:03:42] Alex: Decision: We will have a working demo ready by next Wednesday.
+
+[00:03:48] David: That’s doable.
+
+[00:03:50] Harroop: Works for me.
+
+[00:03:52] Priya: Agreed.
+
+[00:03:54] Alex: Great, thanks everyone. Let’s sync again early next week.
+
+[00:03:58] All: Thanks!
